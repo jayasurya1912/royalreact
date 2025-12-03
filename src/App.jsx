@@ -1,33 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <nav className="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <div className="container">
+
+    {/* <a className="navbar-brand " style="background-color: white;border-radius: 0px;" href="#">
+      <img src="images/mainlogo.png" width="160" className="me-2">
+    </a> */}
+
+ 
+    <button classNameName="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+    <div className="collapse navbar-collapse">
+      <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li className="nav-item"><a className="nav-link" href="index.html">Home</a></li>
+        <li className="nav-item"><a className="nav-link" href="#about">About Us</a></li>
+        <li className="nav-item"><a className="nav-link" href="#service">Services</a></li>
+        <li className="nav-item"><a className="nav-link" href="#gallery">Gallery</a></li>
+        <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div className="hotline">
+        Phone-Number : <span> +91 9894842235</span>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
+
+  </div>
+</nav>
+
     </>
   )
 }
